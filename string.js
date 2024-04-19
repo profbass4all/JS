@@ -26,7 +26,7 @@ if(firstPart == secondPart){
 }else{
     isPalin = 'It is not a Palindrome'
 }
-console.log(isPalin)
+//console.log(isPalin)
 
 //let letter = 'loBJAasdk fdpri dnncjfalei fkf'.toLocaleLowerCase()
 // let count =0;
@@ -70,4 +70,54 @@ for(let i = 0; i < word.length; i+=1){
         newWord +=letter
     }
 }
-console.log(newWord)
+//console.log(newWord)
+
+
+
+let market = 'Christiana goes to school'.split(' ')
+let result = []
+
+console.log(market)
+
+for(let i = 0; i < market.length; i++){
+    word = market[i].split('')
+    word[1] = word[1].toUpperCase()
+    let newword = word.join('')
+    result.push(newword)
+}
+//console.log(result.join(' '))
+
+let arr1 = [23, 'butterfly', 'moth', 'caterpilar', 1001]
+
+//question1
+
+//let question1 = arr1.splice(2,0, 'eshinshin', 'praying mantis')
+//console.log(arr1)
+
+//question2
+
+//let question2 = arr1.splice(3,2)
+//console.log(arr1)
+
+//question3
+
+let question3 = arr1.splice(2, 1, 'ayon', 'bed bug', 'ant')
+//console.log(arr1)
+
+function product(number1, number2){
+    return number1 * number2
+}
+
+function isMultiple(multiple){
+    if(isNaN(multiple)){
+        return `Enter a number please`
+    }
+    else if(multiple % 3 == 0 && multiple % 5 == 0){
+        return true
+    }else{
+        return false
+    }
+}
+
+console.log(isMultiple(15))
+console.log(product(30,50))
