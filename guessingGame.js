@@ -1,18 +1,3 @@
-function greet(name){
-    let time = Date()
-    let hour = Number(time.split(' ')[4].split(':')[0])
-    let message= ''
-
-    if(hour >= 0 && hour < 12){
-        message = `Good morning, ${name}`
-    }else if (hour >= 12 && hour < 16){
-        message = `Good afternoon ${name}`
-    }else{
-        message = `Good evening ${name}`
-    }
-    return message
-}
-
 const neededDisplay = (userInput, count, message)=>{
             console.log(message)
             let guessing = 5 - count ==1 ? 'guess': 'guesses'
@@ -21,7 +6,6 @@ const neededDisplay = (userInput, count, message)=>{
                 console.log(alertRemainingGuess)
             }
 }
-
 
 function guessingGame(){
     let secretNumber = Math.ceil(Math.random() * 15)
