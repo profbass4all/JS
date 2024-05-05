@@ -62,3 +62,33 @@ if (1901 <= year <= 2000){
 // }
 
 // console.log(result)
+
+let total =0
+while (true){
+    number = Number(prompt('Enter a number: '))
+    if(number < 0){
+        break
+    }
+    total +=number
+}
+while (true){
+    let name = prompt('Enter a name: ').toLowerCase()
+    if(name == 'end'){
+        console.log('I am done')
+        break
+    }
+    console.log(name)
+}
+
+const numberSeeker = ()=>{
+    let number = prompt('Enter a positive number: ')
+    let factorial = 1
+    while(number > 0){
+        factorial*= number
+
+        number--
+    }
+
+    return factorial
+}
+

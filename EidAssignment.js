@@ -128,7 +128,7 @@ for(let i = 0; i <= wahala.length-1; i++){
         }
     }
 }
-console.log(newWahala)
+//console.log(newWahala)
 
 
 //let count = 0
@@ -182,7 +182,86 @@ while(i <= count ){
 let numb = 50
 while(numb <= 50 && numb > 20) {
     if(numb % 3 == 0){
-        console.log(numb)
+        //console.log(numb)
     }
     numb--
 }
+let myFriend = {
+    first_name: 'Sherifat',
+    last_name: 'Oshoala',
+    specialization: 'Backend Development',
+    complexion: 'dark skinned',
+    favourite_drink: 'Viju Choco',
+    mood: 'moody',
+    isBrilliant: true,
+    isEngaged: true,
+    isMarried: false,
+    isLovely: true,
+    talents: ['coding', 'presentation', 'critical thinking']
+}
+
+for(let key in myFriend){
+    //console.log('key :'+' ' + key,',' + ' Value :' + ' ' + myFriend[key])
+}
+//console.log(Object.entries(myFriend))
+let products = [
+    {
+    name : 'headphones',
+    price: 70,
+    discount: 0
+},
+{
+    name : 'air-pod',
+    price: 700,
+    discount: 0
+},
+{
+    name : 'battery',
+    price: 245,
+    discount: 0
+},
+{
+    name : 'groceries',
+    price: 54,
+    discount: 0
+},
+{
+    name : 'fruits',
+    price: 385,
+    discount: 0
+},
+{
+    name : 'Iphone',
+    price: 9800,
+    discount: 0
+}
+
+]
+
+const discountThePrice = (arrayofObjects)=>{
+    const mappedArray = arrayofObjects.map((obj, index, arr)=>{
+        if(obj.price > 100){
+        obj.discount = '10%'
+        obj.discountedPrice = (Number(obj.price)) - (Number(obj.price) * 0.1)
+    }else{
+        obj.discount = '7%'
+        obj.discountedPrice = (Number(obj.price)) - (Number(obj.price) * 0.07) 
+        }
+    })
+    
+    return arrayofObjects
+}
+
+const checkIfDiscounted = (arrayofObjects)=>{
+    const isDiscounted = arrayofObjects.filter((elem, index, arr)=>{
+         return elem.hasOwnProperty('discountedPrice')
+    })
+    
+    if(isDiscounted.length != arrayofObjects.length){
+        return discountThePrice(arrayofObjects)
+    }else{
+        return arrayofObjects
+    }
+}
+console.log(checkIfDiscounted(products))
+
