@@ -63,22 +63,22 @@ if (1901 <= year <= 2000){
 
 // console.log(result)
 
-let total =0
-while (true){
-    number = Number(prompt('Enter a number: '))
-    if(number < 0){
-        break
-    }
-    total +=number
-}
-while (true){
-    let name = prompt('Enter a name: ').toLowerCase()
-    if(name == 'end'){
-        console.log('I am done')
-        break
-    }
-    console.log(name)
-}
+// let total =0
+// while (true){
+//     number = Number(prompt('Enter a number: '))
+//     if(number < 0){
+//         break
+//     }
+//     total +=number
+// }
+// while (true){
+//     let name = prompt('Enter a name: ').toLowerCase()
+//     if(name == 'end'){
+//         console.log('I am done')
+//         break
+//     }
+//    // console.log(name)
+// }
 
 const numberSeeker = ()=>{
     let number = prompt('Enter a positive number: ')
@@ -91,4 +91,8 @@ const numberSeeker = ()=>{
 
     return factorial
 }
+function weather(input){
+    return input == 'cold' || input == 'wet'? 'Winter':'Summer'
+}
 
+console.log(weather('coldg'))
